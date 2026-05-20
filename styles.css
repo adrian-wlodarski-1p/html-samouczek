@@ -28,7 +28,7 @@ nav ul ul {
   left: 20vw;
 }
 nr2 { top: 30px; }
-nav ul ul li:hover { display: block; }
+nav ul ul li:hover>ul { display: block; }
 nav li { display: block; }
 nav a {
   display: inline-block;
