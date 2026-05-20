@@ -12,7 +12,7 @@ header, nav, #content, footer {
 }
 header { height: 100px; }
 main { display: flex; }
-nav, #content { height: calc(100vh - 150px) }
+main, nav, #content { height: calc(100vh - 150px) }
 nav { width: 30%; }
 #content { width: 70%; }
 footer {
