@@ -10,12 +10,15 @@ color3: 087500 */
 header, nav, #content, footer {
   border: 1px solid black;
 }
-header { height: 100px; }
-main { display: flex; }
-main, nav, #content { height: calc(100vh - 150px) }
-nav { width: 30%; }
-#content { width: 70%; }
-footer {
+header {
   height: 50px;
+  text-align: center;
+}
+main { display: flex; }
+main, nav, #content { height: calc(100vh - 75px) }
+nav { width: 20%; }
+#content { width: 80%; }
+footer {
+  height: 25px;
   text-align: center;
 }
