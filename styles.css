@@ -17,6 +17,21 @@ header {
 main { display: flex; }
 main, nav, #content { height: calc(100vh - 75px) }
 nav { width: 20%; }
+nav ul {
+  position: relative;
+  list-style-type: none;
+}
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 20vw;
+}
+nav a {
+  display: block;
+  width: 200px;
+  border: 1px solid black;
+}
 #content { width: 80%; }
 footer {
   height: 25px;
