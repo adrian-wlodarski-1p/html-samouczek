@@ -1,5 +1,20 @@
+/* color1: 0ED100
+color2: 0B9400
+color3: 087500 */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: Helvetica;
+}
+header, nav, #content, footer {
+  border: 1px solid black;
+}
+header { height: 100px; }
+main { display: flex; }
+nav { width: 30%; }
+#content { width: 70%; }
+footer {
+  height: 50px;
+  text-align: center;
 }
