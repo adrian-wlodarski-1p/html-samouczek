@@ -27,9 +27,13 @@ nav ul ul {
   top: 0;
   left: 20vw;
 }
+nr2 { top: 30px; }
+nav ul ul li:hover { display: block; }
+nav li { display: block; }
 nav a {
-  display: block;
+  display: inline-block;
   width: 200px;
+  height: 30px;
   border: 1px solid black;
 }
 #content { width: 80%; }
