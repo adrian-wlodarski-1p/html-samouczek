@@ -5,50 +5,49 @@ const svg = `<svg width="40" height="40">
 let text = `
 		<ul>
           <li><a href="../index.html">Strona główna</a></li>
-          <li><a href="#" class="lst">Podstawy
+          <li><a class="lst">Podstawy
 		    ${svg}</a>
             <ul>
               <li><a href="./wprowadzenie.html">Wprowadzenie</a></li>
-              <li><a href="#">Struktura strony</a></li>
-              <li><a href="#">Znaczniki formatowania</a></li>
-              <li><a href="#">Odnośniki i obrazy</a></li>
-              <li><a href="#">Listy</a></li>
-              <li><a href="#">Tabele</a></li>
-              <li><a href="#"><code>&lt;meta&gt;</code>, <code>&lt;div&gt;</code> i <code>&lt;span&gt;</code></a></li>
+              <li><a href="./struktura_strony.html">Struktura strony</a></li>
+              <li><a href="./znaczniki_formatowania.html">Znaczniki formatowania</a></li>
+              <li><a href="./odnosniki_obrazy.html">Odnośniki i obrazy</a></li>
+              <li><a href="./listy.html">Listy</a></li>
+              <li><a href="./tabele.html">Tabele</a></li>
+              <li><a href="./meta_div_span.html"><code>&lt;meta&gt;</code>, <code>&lt;div&gt;</code> i <code>&lt;span&gt;</code></a></li>
             </ul>
           </li>
-          <li><a href="#" class="lst">Style
+          <li><a class="lst">Style
 			${svg}</a>
             <ul>
-              <li><a href="#">Wprowadzenie do CSS</a></li>
-              <li><a href="#">Podstawy CSS</a></li>
-              <li><a href="#">Podstawowe właściwości</a></li>
-              <li><a href="#">Formatowanie tekstu</a></li>
-              <li><a href="#">Jednostki</a></li>
-              <li><a href="#">Formatowanie list</a></li>
-              <li><a href="#">Selektory</a></li>
+              <li><a href="./wprowadzenie_css.html">Wprowadzenie do CSS</a></li>
+              <li><a href="./podstawowe_wlasciwosci.html">Podstawowe właściwości</a></li>
+              <li><a href="./formatowanie_tekstu.html">Formatowanie tekstu</a></li>
+              <li><a href="./jednostki.html">Jednostki</a></li>
+              <li><a href="./formatowanie_list.html">Formatowanie list</a></li>
+              <li><a href="./selektory.html">Selektory</a></li>
             </ul>
           </li>
-		  <li><a href="#" class="lst">Złożone strony
+		  <li><a class="lst">Złożone strony
 		    ${svg}</a>
             <ul>
-              <li><a href="#">Menu poziome i pionowe</a></li>
-              <li><a href="#">Pozycjonowanie</a></li>
-              <li><a href="#">Podstawowe właściwości</a></li>
-              <li><a href="#">Formatowanie tekstu</a></li>
-              <li><a href="#">Jednostki</a></li>
-              <li><a href="#">Formatowanie list</a></li>
-              <li><a href="#">Selektory</a></li>
+              <li><a href="./menu_poziome_pionowe.html">Menu poziome i pionowe</a></li>
+              <li><a href="./pozycjonowanie.html">Pozycjonowanie</a></li>
+              <li><a href="./uklad_strony.html">Układ strony</a></li>
+              <li><a href="./formularze.html">Formularze</a></li>
+              <li><a href="./formularze_input.html">Formularze: <code>&lt;input&gt;</code></a></li>
+              <li><a href="./menu_rozwijane.html">Menu rozwijane</a></li>
+              <li><a href="./responsywnosc.html">Responsywność</a></li>
             </ul>
           </li>
-		  <li><a href="#" class="lst">Zaawansowane
+		  <li><a class="lst">Zaawansowane
 		    ${svg}</a>
 			<ul>
-			  <li><a href="#">Animacje</a></li>
-			  <li><a href="#">Gradienty</a></li>
-			  <li><a href="#">Audio i wideo</a></li>
-			  <li><a href="#">Mapy odsyłaczy</a></li>
-			  <li><a href="#">Rysunki SVG</a></li>
+			  <li><a href="./animacje.html">Animacje</a></li>
+			  <li><a href="./gradienty.html">Gradienty</a></li>
+			  <li><a href="./audio_wideo.html">Audio i wideo</a></li>
+			  <li><a href="./mapy_odsyłaczy.html">Mapy odsyłaczy</a></li>
+			  <li><a href="./rysunki_svg.html">Rysunki SVG</a></li>
 			</ul>
 		  </li>
 		  <li><a href="./materialy.html">Materiały</a></li>
