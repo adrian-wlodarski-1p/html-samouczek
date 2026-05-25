@@ -55,7 +55,6 @@ let text = `
 		  <li><a href="#" id="omnie">O mnie</a></li>
         </ul>
 `
-console.log(window.is_this_file_the_main_page);
 if (typeof window.is_this_file_the_main_page !== "undefined") {
 	text = text.replace("../index.html","#");
 	text = text.replaceAll(`"./`,`"./src/`);
