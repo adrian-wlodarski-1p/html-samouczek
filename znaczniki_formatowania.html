@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl-pl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.07">
+    <title>Znaczniki formatowania</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>Znaczniki formatowania</h1>
+    </header>
+    <main>
+      <nav></nav>
+      <div id="content">
+	    <p>Najprostszą rzeczą, jaką da się napisać za pomocą kodu HTML, jest formatowanie tekstu. Dzisiaj się nauczymy, jak to robić.</p>
+		<h2>Rodzaje znaczników</h2>
+		Znaczniki w HTML dzielą się na kilka rodzajów:
+		<ul>
+		  <li><dfn>Samodzielne</dfn> mogą występować samodzielnie, bez zamykającego elementu:
+		  <pre class="cb">&lt;img src="./obraz.png"&gt;</pre></li>
+		  <li><dfn>Kontenerowe</dfn> wymagają zamykającego elementu, z backslashem (<code>&lt;/...&gt;</code>). Te z kolei dzielą się też na 2 rodzaje:
+		  <ul>
+		    <li><dfn>Liniowe</dfn> mogą znajdować się wewnątrz linii...
+			<pre class="cb">W środku tekstu ukrył się &lt;b&gt;tekst pogrubiony&lt;/b&gt;!</pre>
+			<samp>W środku tekstu ukrył się <b>tekst pogrubiony</b>!</samp></li>
+			<li>...a <dfn>blokowe</dfn> nie mogą:
+			<pre class="cb">Z ubolewaniem muszę przyznać, że &lt;p&gt;paragrafów nie da się wstawić w linię tekstu.&lt;/p&gt;</pre>
+			<samp>Z ubolewaniem muszę przyznać, że <p>paragrafów nie da się wstawić w linię tekstu.</p></samp></li>
+		  </ul></li>
+		</ul>
+		<h2><code>&lt;i&gt;</code> and <code>&lt;b&gt;</code></h2>
+		<p>Są to najbardziej podstawowe znaczniki HTML. &lt;i&gt; sprawia, że tekst jest pochylony (napisany kursywą), a &lt;b&gt; - pogrubiony:</p>
+		<pre class="cb">Ten tekst jest &lt;i&gt;pochylony&lt;/i&gt;, a ten - &lt;b&gt;pogrubiony&lt;/b&gt;.</pre>
+		<samp>Ten tekst jest <i>pochylony</i>, a ten - <b>pogrubiony</b>.</samp>
+		<p>Można też nałożyć jeden na drugi:</p>
+		<pre class="cb">Od teraz tekst będzie &lt;b&gt;pogrubiony, a teraz też &lt;i&gt;pochylony&lt;/i&gt;.&lt;/b&gt;</pre>
+		<samp>Od teraz tekst będzie <b>pogrubiony, a teraz też <i>pochylony</i>.</b></samp
+		<h2>Paragrafy &lt;p&gt;</h2>
+		<p>Paragrafy jest także jednym z najważniejszych elementów HTML. W skrócie, </p>
+	  </div>
+    </main>
+    <footer>© 2026 Adrian Włodarski</footer>
+	<script src="../scripts/nav.js"></script>
+  </body>
+</html>
