@@ -15,7 +15,7 @@ header {
   border-bottom: 2px solid black;
 }
 main { display: flex; }
-main, nav, #content { height: calc(100vh - 75px); }
+main, nav, #content { min-height: calc(100vh - 75px); }
 nav {
   width: 250px;
   border-right: 2px solid black;
@@ -53,24 +53,29 @@ nav svg {
 }
 #content { width: calc(100vw - 250px); }
 #content ul {
-  margin: 5px;
-  margin-left: 20px;
+  margin: 10px;
+  margin-left: 35px;
 }
 p, h2, h3, #content li { margin: 5px; }
-code, .cb {
+code, pre.cb {
   font-family: monospace;
-  font-size: 0.96rem;
+  font-size: 115%;
 }
 samp { display: block; }
-.cb, samp {
+pre.cb, samp {
   max-width: 700px;
   margin: 5px;
   padding: 3px;
   background-color: #DDD;
+  text-wrap: wrap;
 }
 dfn {
   font-style: inherit;
   font-weight: bold;
+}
+em {
+  font-style: italic;
+  font-weight: inherit;
 }
 .img {
   position: absolute;
