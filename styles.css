@@ -96,6 +96,9 @@ em {
   opacity: 0.5;
   z-index: -1;
 }
+.smallimg {
+  width: 10%;
+}
 footer {
   height: 25px;
   border-top: 2px solid black;
