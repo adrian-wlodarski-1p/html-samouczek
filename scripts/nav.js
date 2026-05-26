@@ -24,7 +24,7 @@ let text = `
               <li><a href="./podstawowe_wlasciwosci.html">Podstawowe właściwości</a></li>
               <li><a href="./formatowanie_tekstu.html">Formatowanie tekstu</a></li>
               <li><a href="./jednostki.html">Jednostki</a></li>
-              <li><a href="./formatowanie_list.html">Formatowanie list</a></li>
+              <li><a href="./formatowanie_list_tabel.html">Formatowanie list i tabel</a></li>
               <li><a href="./selektory.html">Selektory</a></li>
             </ul>
           </li>
