@@ -59,7 +59,7 @@ nav svg {
 dt { font-weight: bold; }
 dd { margin-left: 35px; }
 p, h2, h3, #content li { margin: 5px; }
-code, pre.cb {
+code, .cd, pre.cb {
   font-family: monospace;
   font-size: 115%;
 }
