@@ -58,7 +58,7 @@ nav svg {
 }
 dt { font-weight: bold; }
 dd { margin-left: 35px; }
-p, h2, #content li { margin: 5px; }
+p, h2, h3, #content li { margin: 5px; }
 code, pre.cb {
   font-family: monospace;
   font-size: 115%;
@@ -79,6 +79,12 @@ em {
   font-style: italic;
   font-weight: inherit;
 }
+table, th, td {
+  margin: 5px;
+  border-collapse: collapse;
+  border: 2px solid black;
+  padding: 3px 5px;
+}
 .img {
   position: absolute;
   display: flex;
@@ -97,9 +103,6 @@ em {
   text-align: center;
   opacity: 0.5;
   z-index: -1;
-}
-.smallimg {
-  max-width: 300px;
 }
 footer {
   height: 25px;
