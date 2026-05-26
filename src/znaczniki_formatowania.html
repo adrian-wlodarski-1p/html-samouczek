@@ -29,7 +29,7 @@
 			<samp>Z ubolewaniem muszę przyznać, że <p>paragrafów nie da się wstawić w linię tekstu.</p></samp></li>
 		  </ul></li>
 		</ul>
-		<h2><code>&lt;i&gt;</code> and <code>&lt;b&gt;</code></h2>
+		<h2><code>&lt;i&gt;</code> i <code>&lt;b&gt;</code></h2>
 		<p>Są to najbardziej podstawowe znaczniki HTML. &lt;i&gt; sprawia, że tekst jest pochylony (napisany kursywą), a &lt;b&gt; - pogrubiony:</p>
 		<pre class="cb">Ten tekst jest &lt;i&gt;pochylony&lt;/i&gt;, a ten - &lt;b&gt;pogrubiony&lt;/b&gt;.</pre>
 		<samp>Ten tekst jest <i>pochylony</i>, a ten - <b>pogrubiony</b>.</samp>
@@ -43,6 +43,26 @@
 		Ważne są także nagłówki:
 		<pre class="cb">&lt;h1&gt;h1&lt;/h1&gt;&lt;h2&gt;h2&lt;/h2&gt;&lt;h3&gt;h3&lt;/h3&gt;&lt;h4&gt;h4&lt;/h4&gt;&lt;h5&gt;h5&lt;/h5&gt;&lt;h6&gt;h6&lt;/h6&gt;&lt;p&gt;tekst&lt;/p&gt;</pre>
 		<samp><h1>h1</h1><h2>h2</h2><h3>h3</h3><h4>h4</h4><h5>h5</h5><h6>h6</h6><p>tekst</p></samp>
+		<h2>Inne znaczniki formatowania</h2>
+		<ul>
+		  <li><code>&lt;em&gt;</code> służy do wyróżniania tekstu i jest semantycznym odpowiednikiem <code>&lt;i&gt;</code>.</li>
+		  <li><code>&lt;strong&gt;</code> zaznacza bardzo ważny tekst. Jest semantycznym odpowiednikiem <code>&lt;b&gt;</code>.</li>
+		  <li><code>&lt;small&gt;</code> zapisuje mały tekst:
+		  <pre class="cb">Zaraz tekst &lt;small&gt;zrobi się mały.&lt;/small&gt;</pre>
+		  <samp>Zaraz tekst <small>zrobi się mały.</small></samp></li>
+		  <li><code>&lt;sub&gt;</code> robi subskrypt, a <code>&lt;sup&gt;</code> - superskrypt:
+		  <pre class="cb">Czy H&lt;sub&gt;2&lt;/sub&gt;O jest bardziej popularnie niż E=mc&lt;sup&gt;2&lt;/sup&gt;?</pre>
+		  <samp>Czy H<sub>2</sub>O jest bardziej popularnie niż E=mc<sup>2</sup>?</samp></li>
+		  <li><code>&lt;s&gt;</code> przekreśla tekst, a <code>&lt;mark&gt;</code> - zaznacza.
+		  <pre class="cb">Ten tekst &lt;s&gt;jest przekreślony&lt;/s&gt;, a ten &lt;mark&gt;zaznaczony&lt;/mark&gt;.</pre>
+		  <samp>Ten tekst <s>jest przekreślony</s>, a ten <mark>zaznaczony</mark>.</samp></li>
+		  <li><code>&lt;del&gt;</code> służy do zaznaczania tekstu usuniętego (odpowiednik <code>&lt;s&gt;</code>), a <code>&lt;ins&gt;</code> - wstawionego:
+		  <pre class="cb">Zamierzam kupić &lt;del&gt;mleko&lt;/del&gt; &lt;ins&gt;jajka&lt;/ins&gt;.</pre>
+		  <samp>Zamierzam kupić <del>mleko</del> <ins>jajka</ins>.</samp></li>
+		  <li><code>&lt;q&gt;</code> zaznacza <q>cytat</q>, a <code>&lt;blockquote&gt;</code> - cytat blokowy.</li>
+		  <li><code>&lt;code&gt;</code> zaznacza <code>kod</code>.</li>
+		  <li><code>&lt;pre&gt;</code> służy do zapisywania tekstu w dokładnie taki sam sposób, w jaki został zapisany w kodzie, włącznie ze spacjami i znakami nowej linii. Jest on używany w tym projekcie do zapisywania bloków kodu.</li>
+		</ul>
 	  </div>
     </main>
     <footer>© 2026 Adrian Włodarski</footer>
