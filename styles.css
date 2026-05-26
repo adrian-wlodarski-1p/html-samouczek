@@ -97,7 +97,7 @@ em {
   z-index: -1;
 }
 .smallimg {
-  width: 10%;
+  max-width: 300px;
 }
 footer {
   height: 25px;
