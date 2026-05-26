@@ -52,11 +52,11 @@ nav svg {
   right: 0px;
 }
 #content { width: calc(100vw - 250px); }
-#content ul {
+#content ul, #content ol {
   margin: 10px;
   margin-left: 35px;
 }
-p, h2, h3, #content li { margin: 5px; }
+p, h2, #content li { margin: 5px; }
 code, pre.cb {
   font-family: monospace;
   font-size: 115%;
