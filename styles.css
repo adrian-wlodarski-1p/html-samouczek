@@ -15,7 +15,6 @@ header {
   border-bottom: 2px solid black;
 }
 main { display: flex; }
-main, nav, #content { min-height: calc(100vh - 75px); }
 nav {
   width: 250px;
   border-right: 2px solid black;
@@ -110,6 +109,7 @@ footer {
   text-align: center;
 }
 @media (min-width:701px) {
+  main, nav, #content { min-height: calc(100vh - 75px); }
   /*nav li:hover>ul*/ .open {
     display: block;
     border-top: 2px solid black;
@@ -117,13 +117,9 @@ footer {
   nav ul ul a { z-index: 1; }
 }
 @media (max-width:700px) {
-  main {
-    flex-direction: column;
-  }
-  main, nav, #content {
-	width: 100vw;
-	height: auto;
-  }
+  main { flex-direction: column; }
+  main, nav, #content { width: 100vw; }
+  #content { min-height: 70vh; }
   nav ul, nav li, nav a
   { width: 100%; }
   nav ul ul {
