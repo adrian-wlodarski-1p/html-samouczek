@@ -43,10 +43,12 @@
 		  </tr>
 		</table></samp>
 		<p>Gdy samemu stworzysz tabelę w swoim dokumencie, prawdopodobnie nie będzie wyglądać tak ładnie. Dlatego wklej w <code>&lt;head&gt;</code> następujący kod:</p>
-		<pre class="cb">table, th, td {
+		<pre class="cb">&lt;style&gt;
+table, th, td {
   border-collapse: collapse;
   border: 2px solid black;
-}</pre>
+}
+&lt;/style&gt;</pre>
         <p>Wyjaśnimy go w <a href="formatowanie_list_tabel.html">przyszłej sekcji</a>.</p>
 		<h3><code>rowspan</code> i <code>colspan</code></h3>
 		<p>W HTML istnieją dwa atrybuty <code>&lt;td&gt;</code> i <code>&lt;th&gt;</code>, które pozwalają na łączenie komórek tabeli. Są to <code>rowspan</code> i <code>colspan</code>. <code>rowspan</code> łączy pionowo, a <code>colspan</code> poziomo:</p>
