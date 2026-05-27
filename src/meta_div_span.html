@@ -77,6 +77,13 @@
 		  <code>&lt;span&gt;</code> głównie jest używany do formatowania tekstu przy użyciu CSS.</code></li>
 		</ul>
 		<p>Ogólnie te dwa znaczniki są głównie po to, by je formatować za pomocą CSS; bez tego są bezużyteczne.</p>
+		<h2>Bonus: wstawianie znaków</h2>
+		<p>Czasem jest potrzeba, gdy wyświetlić na stronie jakieś znaki, których bezpośrednie wpisanie do kodu HTML może się źle skończyć, na przykład <code>&lt;</code> lub <code>&gt;</code>. Na szczęśnie istnieje mechanizm, który można wykorzystać: wstawianie znaków. Prosto mówiąc, trzeba wpisać "<code>&amp;</code>", tzw. <dfn>kod znaku</dfn>, i "<code>;</code>". Kod znaku "<code>&lt;</code>" to <i>&amp;lt;</i> a "<code>&gt;</code>" to <i>&amp;gt;</i></p>
+		<pre class="cb">Powyżej wyjaśniono znacznik &amp;lt;meta&amp;gt;.</pre>
+		<samp>Powyżej wyjaśniono znacznik &lt;meta&gt;.</samp>
+		<p>Trzeci niepokorny znak to <code>&</code>, który zwykle się wyświetla prawidłowo, ale który jest używany do wstawiania znaków. Jego kod to <i>&amp;amp;</i></p>
+		<pre class="cb">Znak &amp;lt; nagminnie musiałem wstawiać kodem &amp;amp;lt;.</pre>
+		<samp>Znak &lt; nagminnie musiałem wstawiać kodem &amp;lt;.</samp>
       </div>
 	</main>
     <footer>© 2026 Adrian Włodarski</footer>
