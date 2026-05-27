@@ -26,14 +26,14 @@
 &lt;/html&gt;</pre>
         <p>Może się to wydawać skomplikowane, ale wszystko opiszę poniżej:
         <ul>
-		  <li>Przede wszystkim trzeba zwrócić uwagę na <code>&lt;!DOCTYPE html&gt;</code>. Każdy dokument HTML <em>musi</em> zaczynać się od tej deklaracji. Bez niej przeglądarka w ogóle nie rozpozna, że to jest HTML!</li>
+		  <li>Przede wszystkim trzeba zwrócić uwagę na <code>&lt;!DOCTYPE html&gt;</code>. Jest to tak zwana <dfn>deklaracja dokumentu</dfn>. Każdy dokument HTML <em>musi</em> zaczynać się od niej. Bez niej przeglądarka w ogóle nie rozpozna, że to jest HTML!</li>
 		  <li>W <code>&lt;head&gt;&lt;/head&gt;</code> zamieszczone jest wszystko, co nie pojawi się bezpośrednio na stronie. Są to często elementy, które są potrzebne do funkcjonowania strony, ale działają za kulisami.</li>
 		  <li><code>&lt;meta charset="UTF-8"&gt;</code> jest potrzebny do tego, by znaki polskie i specjalne (np. emoji) wyświetlały się prawidłowo.</li>
 		  <li>Wewnątrz <code>&lt;body&gt;&lt;/body&gt;</code> zamieść wszystko, co chcesz zamieścić na stronie. To tutaj znajduje się to, co widzisz na stronie.</li>
 		</ul>
 		<p>Oprócz tego można zamieścić poniższe rzeczy:</p>
 		<ul>
-		  <li>Można nadać stronie tytuł. Według walidatora W3Schools jest to wymagane, jednak ja osobiście tak nie uważam. Umieść go w <code>&lt;head&gt;&lt;/head&gt;</code>:
+		  <li>Można nadać stronie <dfn>tytuł</dfn>. Według walidatora W3Schools jest to wymagane, jednak ja osobiście tak nie uważam. Umieść go w <code>&lt;head&gt;&lt;/head&gt;</code>:
 		  <pre class="cb">&lt;head&gt;
   &lt;meta charset="UTF-8"&gt;
   &lt;title&gt;Tytuł strony&lt;/title&gt;
@@ -54,7 +54,7 @@
     Ten tekst jest zapisany &lt;i&gt;kursywą&lt;/i&gt;.
   &lt;/body&gt;
 &lt;/html&gt;</pre>
-		<p>Pokazuję to:</p>
+		<p>Pokażę to:</p>
 		<pre class="cb">Ten tekst jest zapisany &lt;i&gt;kursywą&lt;/i&gt;.</pre>
 		<p>Także w HTML istnieją komentarze, czyli elementy, które są ignorowane przez przeglądarkę:</p>
 		<pre class="cb">&lt;!-- To jest komentarz--&gt;</pre>
