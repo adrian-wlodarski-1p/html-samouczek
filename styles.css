@@ -121,7 +121,6 @@ footer {
   main, nav, #content { width: 100vw; }
   #content {
     min-height: 70vh;
-    overflow: hidden;
   }
   nav ul, nav li, nav a
   { width: 100%; }
@@ -130,6 +129,7 @@ footer {
 	top: 0;
 	left: 0;
   }
+  table { max-width: calc(100vw - 10px); }
   .img, .img img {
     display: none;
   }
