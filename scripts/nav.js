@@ -26,6 +26,7 @@ let text = `
               <li><a href="./jednostki.html">Jednostki</a></li>
               <li><a href="./formatowanie_list_tabel.html">Formatowanie list i tabel</a></li>
               <li><a href="./selektory.html">Selektory</a></li>
+			  <li><a href="./kaskadowosc.html">Kaskadowość</a></li>
             </ul>
           </li>
 		  <li><a class="lst">Złożone strony
