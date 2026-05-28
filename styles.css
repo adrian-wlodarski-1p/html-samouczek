@@ -64,11 +64,16 @@ code, .cd, pre.cb {
   font-family: monospace;
   font-size: 115%;
 }
-samp { display: block; }
-pre.cb, samp {
-  max-width: 700px;
-  margin: 5px;
+samp {
+  display: block;
+  max-width: 706px;
+}
+pre.cb {
   padding: 3px;
+  max-width: 700px;
+}
+pre.cb, samp {
+  margin: 5px;
   background-color: #DDD;
   text-wrap: wrap;
 }
