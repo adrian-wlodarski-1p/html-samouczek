@@ -64,6 +64,17 @@ code, .cd, pre.cb {
   font-family: monospace;
   font-size: 115%;
 }
+.box, .ibox { display: inline-block; }
+.box {
+  width: 100px;
+  height: 100px;
+  margin-right: 3px;
+  border: 2px solid black;
+}
+.red { background: red; }
+.green { background: green; }
+.blue { background: blue; }
+.cyan { background: cyan; }
 samp {
   display: block;
   max-width: 706px;
@@ -135,6 +146,7 @@ footer {
     position: relative;
 	top: 0;
 	left: 0;
+	border-bottom: 1px solid black;
   }
   table { max-width: calc(100vw - 10px); }
   .img, .img img {
