@@ -58,6 +58,8 @@ nav svg {
 dt { font-weight: bold; }
 dd { margin-left: 35px; }
 p, h2, h3, #content li { margin: 5px; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.35em; }
 code, .cd, pre.cb {
   font-family: monospace;
   font-size: 115%;
@@ -70,7 +72,6 @@ pre.cb, samp {
   background-color: #DDD;
   text-wrap: wrap;
 }
-samp div { margin: 5px; }
 dfn {
   font-style: inherit;
   font-weight: bold;
