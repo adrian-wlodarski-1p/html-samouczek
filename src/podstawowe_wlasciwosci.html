@@ -29,7 +29,21 @@
 }
 &lt;div&gt;&lt;/div&gt;</pre>
 		<samp><div style="width:100px;height:100px;background:blue"></div></samp>
+		<p>Choć dozwolone są też procenty, mierzone względem elementu nadrzędnego:</p>
+		<pre class="cb">#parent {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
+#child {
+  width: 50%;
+  height: 50%;
+  background-color: red;
+}
+&lt;div id="parent"&gt;&lt;div id="child"&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+		<samp><div style="width:100px;height:100px;background:blue"><div style="width:50%;height:50%;background:red"></div></div></samp>
 		<p>Sczegóły mierzenia wielkości w innych jednostkach będą przedstawione <a href="jednostki.html">na innej lekcji</a>.</p>
+		<p>Zauważmy, że użyłem selektora z <code>#</code> i atrybutu <code>id</code>. Ta notacja pozwala stosować wybrane style na konkretnych elementach, nawet jeśli są takimi samymi znacznikami.</p>
 		<p>Jest także kilka interesujących wartości nie-numerycznych. Pierwszą z nich jest <code>auto</code>, które sprawia, że wielkość bloku sama dostosowuje się do okoliczności:</p>
 		<pre class="cb">div {
   width: auto; /* domyślne */
@@ -38,6 +52,7 @@
 }
 &lt;div&gt;Wielkość tego bloku dopasowuje się do tekstu. Jest to zachowanie domyślne.&lt;/div&gt;</pre>
 		<samp><div style="background:blue">Wielkość tego bloku dopasowuje się do tekstu. Jest to zachowanie domyślne.</div></samp>
+		<p>Jest także <code>inherit</code>, który sprawia, że element przejmuje wielkość po rodzicu.</p>
       </div>
 	</main>
     <footer>© 2026 Adrian Włodarski</footer>
