@@ -70,6 +70,7 @@ pre.cb, samp {
   background-color: #DDD;
   text-wrap: wrap;
 }
+samp div { margin: 5px; }
 dfn {
   font-style: inherit;
   font-weight: bold;
