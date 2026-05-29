@@ -69,7 +69,6 @@ code, .cd, pre.cb {
   width: 100px;
   height: 100px;
   margin-right: 3px;
-  border: 2px solid black;
 }
 .red { background: red; }
 .green { background: green; }
