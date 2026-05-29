@@ -103,8 +103,8 @@ border-color: black;</pre>
 		<h2><code>box-sizing: border-box</code></h2>
 		<p>Czasem podczas kodowania możesz się natknąć na jeden problem: <code>padding</code> i <code>border</code> zwiększają wyświetlaną szerokość i wysokość, więc <code>width</code> i <code>height</code> mogą nie odzwierciedlać prawdziwej wielkości elementu:</p>
 		<pre class="cb">div {
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   display: inline-block;
 }
 #one { padding: 0; background: red; }
@@ -114,14 +114,26 @@ border-color: black;</pre>
 		<p>Lecz ustawiając właściwość <code>box-sizing</code> na <code>border-box</code>, można temu zapobiec. Zmienia to sposób obliczania rozmiarów elementu, tak że <code>padding</code> i <code>border</code> są już w nich uwzględnione:</p>
 		<pre class="cb">div {
   box-sizing: border-box;
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   display: inline-block;
 }
 #one { padding: 0; background: red; }
 #two { padding: 25px; background: blue; }
 &lt;div id="one"&gt;&lt;div id="two"&gt;</pre>
         <samp><div class="red box" style="box-sizing:border-box;"></div><div class="blue box" style="padding:25px;box-sizing:border-box;"></div></samp>
+		<h2>Właściwości kierunkowe</h2>
+		<p>Można ustawić, by <code>margin</code>, <code>padding</code> lub <code>border</code> wpływały na tylko jedną stronę elementu, poprzed dodanie <code>-left</code>, <code>-right</code>, <code>-top</code> lub <code>-bottom</code> na końcu, ale przed przyrostkiem. Na przykład margin stosowane tylko po lewej to <code>margin-left</code>, ale zmiana koloru <code>border</code>u tylko po prawej to już <code>border-right-color</code>:</p>
+		<pre class="cb">div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border: 2px solid black;
+  margin-left: 10px;
+  border-right-color: blue;
+}
+&lt;div&gt;&lt;/div&gt;</pre>
+        <samp><div class="red box" style="margin-left:10px;border-right-color:blue;"></div></samp>
       </div>
 	</main>
     <footer>© 2026 Adrian Włodarski</footer>
