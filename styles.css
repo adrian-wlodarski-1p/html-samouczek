@@ -5,8 +5,9 @@ color3: 087500  */
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Helvetica;
+  font-family: inherit;
 }
+body { font-family: Helvetica; }
 #content * { box-sizing: content-box; }
 header {
   height: 50px;
