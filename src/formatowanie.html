@@ -72,6 +72,20 @@
 		</ul>
 		<h2>Formatowanie z CSS</h2>
 		<p>Teraz, gdy zapoznaliśmy się z podstawowym formatowaniem, możemy się zająć zadaniami, do których zwykle używa się CSSa.</p>
+		
+		<h3>Zmiana czcionki</h3>
+		<p>Czcionka jest jedną z najbardziej podstawowych elementów strony. W HTML5 robi się to głównie za pomocą CSS.</p>
+		<p><code>font-family</code> pozwala ustawić czcionkę, lub rodzinę czcionek.</p>
+		<pre class="cb">font-family: "Times New Roman", serif;</pre>
+		<ul>
+		  <li style="font-family:serif;"><dfn>serif</dfn> to czcionki, które mają różne szeryfy dołączone do litery. Są one bardzo popularne, gdyż nadają czcionce poważny wygląd. Najważniejsze z nich to "Times New Roman" i Georgia.</li>
+		  <li style="font-family:sans-serif;"><dfn>sans-serif</dfn> to czcionki, które nie mają szeryfów. Wyglądają bardziej przyjaźnie, ale ciągle z powagą. Najpopularniejsze to: Arial, Verdana, Helvetica.</li>
+		  <li style="font-family:monospace;"><dfn>monospace</dfn> to czcionki, które mają stałą szerokość. Wyglądają one jak komputerowy kod. Najważniejszą jest "Courier New", ale są też "Lucida Console" i Monaco.</li>
+		  <li style="font-family:cursive;"><dfn>cursive</dfn> to czcionki, które wyglądają jak ręcznie pisany tekst. Chociaż są klimatyczne, należy z nimi uważać, bo mogą być nieczytelne. Najpopularniejsze to "Brush Script MT".</li>
+		  <li style="font-family:fantasy;">fantasy to czcionki, które wyglądają niestandardowo. Zanim się ich użyje, należy sprawdzić, czy pasują do strony. Najpopularniejsze to: Copperplate, Papyrus.</li>
+		</ul>
+		<p>Jest kilka znaczników semantycznych, które zmieniają czcionkę na <code>monospace</code>. Między innymi: <code>&lt;code&gt;</code>, <code>&lt;samp&gt;</code> i <code>&lt;kbd&gt;</code>.</p>
+		
 		<h3>Zmiana wielkości czcionki</h3>
 		<p>Najprostszy sposób zmiany wielkości czcionki choć nie popularny sposób to użycie specjalnych znaczników. <code>&lt;small&gt;</code> pozwala na zmniejszenie tekstu, a <code>&lt;big&gt;</code> na zwiększenie. <code>&lt;small&gt;</code> jest też znacznikiem semantycznym oznaczającym komentarze i informacje prawne/o prawach autorskich. Trzeba się jednak wystrzegać <code>&lt;big&gt;</code>, bo jest przestarzały i nie jest już częścią standardu HTML5.</p>
 		<p>Innym sposobem jest właściwość <code>font-size</code>. Możliwości to:</p>
