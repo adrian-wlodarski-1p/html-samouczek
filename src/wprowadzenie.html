@@ -14,21 +14,70 @@
       <nav></nav>
       <div id="content">
 		<h2>Co to HTML?</h2>
-		<p>Zapewne zastanawiałeś (lub /aś) się, jak się tworzy strony internetowe. i choć prawda, istnieją kreatory stron internetowych, to można też stronę napisać od zera, za pomocą tak zwanego HTML. Więc czym ono jest? Otóż <dfn>HTML</dfn> (<abbr>HyperText Markup Language</abbr>) to tak zwany język znaczników. Napisany w nim kod to ciało każdej strony internetowej. Kod HTML składa się z tak zwanych <dfn>znaczników</dfn>, czyli elementów pozwalających między innymi formatować kod:</p>
-		<pre class="cb">&lt;i&gt;Ten tekst zostanie pochylony.&lt;/i&gt;</pre>
-		<samp><i>Ten tekst zostanie pochylony.</i></samp>
-		<p>Zanim jednak zaczniemy swoją przygodę z HTML, musimy poznać trochę terminologii dotyczącej stron internetowych.</p>
-		<h2>Przydatne terminy</h2>
+		<p>Zapewne zastanawiałeś (lub /aś) się, jak się tworzy strony internetowe. i choć prawda, istnieją kreatory stron internetowych, to można też stronę napisać od zera, za pomocą tak zwanego HTML. Więc czym ono jest? Otóż <dfn>HTML</dfn> to tak zwany język znaczników. Napisany w nim kod to ciało każdej strony internetowej. Kod HTML składa się z tak zwanych <dfn>znaczników</dfn>, czyli elementów pozwalających między innymi formatować kod:</p>
+		<pre class="cb">&lt;znacznik&gt;...&lt;/znacznik&gt;</pre>
+		<p>Zanim jednak zaczniemy swoją przygodę z HTML, musimy poznać trochę terminologii:</p>
 		<ul>
 		  <li><dfn>Strona internetowa</dfn> to pojedyncza strona ładowana przez przeglądarkę. Technicznie rzecz mówiąc, jest to dokument HTML, chociaż jest pewien haczyk, który wyjaśnię w następnej sekcji.</li>
 		  <li><dfn>Witryna</dfn> to zestaw powiązanych ze sobą stron internetowych. Jest ona dostępna pod jednym, spójnym adresem URL.</li>
 		  <li><dfn>Znacznik</dfn> to instrukcja formatująca, która informuje przeglądarkę, jak wyświetlać strony internetowe. Występują one także w XML.</li>
 		</ul>
-		<h2>Zanim zaczniesz</h2>
-		<p>Jest kilka rzeczy, które lepiej wiedzieć, zanim chwycisz za klawiaturę i wczytasz się w zakurzone woluminy:</p>
+		<h2>Struktura strony</h2>
+		<p>Jedną z najważniejszych rzeczy w HTML jest tzw. <dfn>struktura strony</dfn>. Każda strona ma określoną strukturę, bez której nie zadziała prawidłowo. Przedstawiona jest ona poniżej:</p>
+		<pre class="cb">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+        <!--<details>
+		  <summary>XHTML?</summary>
+		  Żeby strona zaliczała się do XHTML i była prawidłowa, musi się zaczynać od:
+		  <pre class="cb">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;</pre>
+		</details>-->
+		<p>Każdy element strony jest ważny i nie może zostać pominięty (z wyjątkiem <code>&lt;meta&gt;</code>, które jednak dba o to, by wszystkie znaki wyświetlały się prawidłowo). W <code>&lt;title&gt;</code> umieść tytuł strony:</p>
+		<pre class="cb">&lt;title&gt;Tytuł strony&lt;/title&gt;</pre>
+		<p>Możesz też opcjonalnie umieścić informację, że strona jest napisana po polsku:</p>
+		<pre class="cb">&lt;html lang="pl-pl"&gt;</pre>
+		<p>Wszelką treść umieść wewnątrz <code>&lt;body&gt;</code>.</p>
+		<h2>Podstawy</h2>
+		<h3>Rodzaje znaczników</h3>
+		<p>Jest kilka rodzajów znaczników:</p>
 		<ul>
-		  <li>Po pierwsze, technicznie rzecz mówiąc, HTML służy tylko do tworzenia struktury strony. Do formatowania służy <dfn>CSS</dfn>. Tak, można oczywiście zrobić stronę bez CSS, lecz po pierwsze taka strona nie byłaby zbyt estetyczna, a po drugie jej wygląd byłby całkowicie zależny od przeglądarki, czego nie chcemy. Potrzebujemy jednak najpierw przerobić podstawy HTML, zanim zabierzemy się za CSS.</li>
-          <li>Po drugie, jako że w HTML nie ma czegoś takiego jak "komunikat błędu", istnieje przydatne narzędzie, tak zwany <dfn>walidator</dfn>, który pozwala sprawdzić, czy kod jest poprawny. Link jest zamieszczony <a href="./materialy.html#validator">w materiałach</a>.</li>
+		  <li><dfn>Samodzielne</dfn> mogą występować samodzielnie, bez zamykającego znacznika. Oba warianty są prawidłowe (ale tylko drugi w XHTML):
+		  <pre class="cb">&lt;znacznik&gt;
+&lt;znacznik /&gt;</pre></li>
+		  <li><dfn>Kontenerowe</dfn> wymagają zamykającego znacznika.
+		  <pre class="cb">&lt;znacznik&gt;treść&lt;/znacznik&gt;</pre>
+		  <ul>
+		    <li><dfn>Liniowe</dfn> mogą występować wewnątrz pojedynczej linii tekstu.</li>
+		    <li><dfn>Blokowe</dfn> nie mogą występować wewnątrz linii tekstu.</li>
+		  </ul>
+		</ul>
+		<h3>Podstawowe znaczniki</h3>
+		<p>Jest kilka podstawowych znaczników, jakich możesz użyć (wszystkie blokowe):</p>
+		<ul>
+		  <li><code>&lt;p&gt;</code> zaznacza akapit.</li>
+		  <li><code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code> itd. aż do <code>&lt;h6&gt;</code> są to różne stopnie nagłówka. <code>&lt;h1&gt;</code> jest najważniejsze, a <code>&lt;h6&gt;</code> jest najmniej ważne.</li>
+		</ul>
+		<pre class="cb">&lt;h1&gt;Główny nagłówek&lt;/h1&gt;
+&lt;p&gt;Znacznika h1 używaj jako tytułu strony. Powinienen być tylko jeden h1.&lt;/p&gt;
+&lt;h2&gt;Nagłówek sekcji&lt;/h2&gt;
+&lt;p&gt;Znacznika h2 jest mniej ważny niż h1.&lt;/p&gt;
+...</pre>
+		<ul><li>Są także dwa przydatne znaczniki: <code>&lt;br&gt;</code> wymusza wstawienie nowej linii, a <code>&lt;hr&gt;</code> wstawia poziomą linię.</li></ul>
+		<p>W HTML istnieją też <dfn>komentarze</dfn>, czyli fragmenty, które będą ignorowane:</p>
+		<pre class="cb">&lt;!--Ten fragment będzie ignorowany.--&gt;</pre>
+		<h2>Zanim zaczniesz</h2>
+		<p>Jedną ważną rzeczą, jaką musisz wiedzieć, jest to, że HTML nie ma domyślnie obsługi błędów. Możesz stracić całe godziny na szukaniu wcale nie oczywistego błędu. Istnieją dwa główne rozwiązania:</p>
+		<ul>
+          <li>Używać narzędzia zwanego <dfn>walidatorem</dfn>, który pokazuje wszelkie nieprawidłowości, i sprawdzaj za pomocą niego stronę po każdej poważnej zmianie. Link jest zamieszczony <a href="./materialy.html#validator">w materiałach</a>.</li>
+		  <li>Napisać stronę w XHTML. Co prawda zasady będą bardziej restrykcyjne, ale za to jeśli w kodzie będzie jakikolwiek błąd, strona nie będzie się wyświetlać. Dzięki temu będziesz wiedzieć, kiedy popełniłeś błąd. Jeśli zdecydujesz się na coś takiego, sprawdzaj podgląd strony często.</li>
 		</ul>
 	  </div>
     </main>
