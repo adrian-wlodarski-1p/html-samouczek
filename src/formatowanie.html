@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pl-pl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.07">
+    <title>Formatowanie tekstu</title>
+    <link rel="stylesheet" href="../styles.css">
+	<style> samp { padding: 1px; } </style>
+  </head>
+  <body>
+    <header>
+      <h1>Formatowanie tekstu</h1>
+    </header>
+    <main>
+      <nav></nav>
+      <div id="content">
+	    <p>Formatowanie tekstu to jedna z najłatwiejszych i przy tym najważniejszych rzeczy, jakie tylko da się zrobić z HTML i CSS.</p>
+		<p>Będziemy się uczyć efekt po efekcie, i 3 metody, jak go osiągnąć:
+		<ul>
+		  <li><em>Znacznik formatujący</em> - prosty znacznik, przydatny dla początkujących do szybkiego sformatowania tekstu.</li>
+		  <li><em>właściwość CSS</em>.</li>
+		  <li><em>Znacznik semantyczny</em> - znacznik, którego zadaniem jest nie tyle sformatowanie tekstu w pewien sposób, o ile wykorzystanie w określonych okolicznościach.</li>
+		</ul>
+		<p>Później wyjaśnimy efekty, jakie można osiągnąć tylko za pomocą CSS.</p>
+		
+		<h3>Pogrubienie</h3>
+		<p>Podstawowy znacznik pogrubiający tekst to <code>&lt;b&gt;</code>.</p>
+		<p>Można ten efekt osiągnąć za pomocą stylów za pomocą <code>font-weight</code>. Można za pomocą niego ustawić różne stopnie pogrubienia, lecz niestety wiele przeglądarek nie rozróżnia podobnych wartości. Wartości to: <code>normal</code> (zwykły), <code>bold</code> (pogrubiony), <code>bolder</code> (bardziej pogrubiony), <code>lighter</code> (uszczuplony) oraz wartości <code>100</code>, <code>200</code> itd. aż do <code>900</code>, gdzie <code>400</code> to zwykły i <code>700</code> to pogrubiony.</p>
+		<p>Znacznik <code>&lt;strong&gt;</code> określa tekst, który jest <em>bardzo</em> ważny.</p>
+		
+		<h3>Pochylenie (kursywa)</h3>
+		<p>Podstawowy znacznik pochylający tekst to <code>&lt;i&gt;</code>.</p>
+		<p>Można ten efekt osiągnąć za pomocą stylów za pomocą <code>font-style</code>. Można za pomocą niego ustawić różne stopnie pogrubienia, lecz niestety wiele przeglądarek nie rozróżnia podobnych wartości. Wartości to: <code>normal</code> (zwykły), <code>italic</code> (pochylony /kursywa) i <code>oblique</code> (bardziej pochylony).</p>
+		<p>Znacznik <code>&lt;em&gt;</code> określa tekst wyróżniony.</p>
+		
+		<h3>Podkreślenie i przekreślenie</h3>
+		<p>Znacznik podkreślający tekst to <code>&lt;u&gt;</code>. Jest to także znacznik semantyczny - w założeniu ma być używany do tekstu, który jest neiprawdiłoow zpaisnay.</p>
+		<p>Znacznik przekreślający tekst to <code>&lt;s&gt;</code>. Znacznik semantyczny to <code>&lt;del&gt;</code>, który oznacza, że coś zostało usunięte.</p>
+		<p>Można także podkreślić lub przekreślić tekst za pomocą <code>text-decoration</code>. Jest to tak naprawdę zbiór różnych właściwości:</p>
+		<pre class="cb">text-decoration: underline blue dashed 2px;</pre>
+		<ul>
+		  <li><code>text-decoration-line</code> określa pozycję linii: ponad tekstem (<code>overline</code>), przekreślenie (<code>line-through</code>) lub podkreślenie (<code>underline</code>).</li>
+		  <li><code>text-decoration-color</code> określa kolor linii.</li>
+		  <li><code>text-decoration-style</code> określa styl linii: jednolita (<code>solid</code>), falowana (<code>wavy</code>), podwójna (<code>double</code>), kropkowana (<code>dotted</code>) lub kreskowana (<code>dashed</code>).</li>
+		  <li><code>text-decoration-thickness</code> określa grubość podkreślenia. Może być wyrażona w pikselach, procentach lub innych jednostkach.</li>
+		</ul>
+		
+		<h3>Zaznaczenie (kolor tła)</h3>
+		<p>Można zaznaczyć tekst za pomocą <code>&lt;mark&gt;</code>.</p>
+		<p>Podstawową właściwością pozwalającą zmienić kolor tła dowolnego elementu jest <code>background-color</code> (w skrócie <code>background</code>. Wartością musi być słowna nazwa koloru (<code>red</code>) lub kod hex (<code>#FF0000</code> lub <code>#F00</code>).
+		<p>Odpowiednikiem <code>&lt;mark&gt;</code> jest:</p>
+		<pre class="cb" style="display:inline-block;margin-top:0;">background-color: yellow;</pre>
+		<h2>Lista znaczników semantycznych</h2>
+		<ul>
+		  <li><code>&lt;abbr title="..."&gt;</code> - tym znacznikiem otacza się skrót. W <code>title</code> umieść pełną nazwę.</li>
+		  <li><code>&lt;blockquote&gt;</code> oznacza cytat blokowy.</li>
+		  <li><code>&lt;cite&gt;</code> używa się do oznaczenia tytułu dzieła.</li>
+		  <li><code>&lt;code&gt;</code> oznacza kod.</li>
+		  <li><code>&lt;del&gt;</code> określa usuniętą treść. Jest często używane z <code>&lt;ins&gt;</code>.</li>
+		  <li><code>&lt;dfn&gt;</code> określa definiowany termin.</li>
+		  <li><code>&lt;ins&gt;</code> określa dodaną treść. Jest często używane z <code>&lt;del&gt;</code>.</li>
+		  <li><code>&lt;kbd&gt;</code> określa wejście klawiaturowe. W zależności od kontekstu mogą to być przyciski wciskane na klawiaturze lub wpisany tekst.</li>
+		  <li><code>&lt;pre&gt;</code> wyświetla tekst znajdujący się wewnątrz niego w dokładnie taki sam sposób, w jaki został zapisany, włącznie ze spacjami i znakami nowej linii.</li>
+		  <li><code>&lt;q&gt;</code> określa cytat.</li>
+		  <li><code>&lt;samp&gt;</code> określa wyjście (output) programu.</code></li>
+		  <li><code>&lt;small&gt;</code> zmniejsza tekst.</li>
+		  <li style="margin-bottom:0;"><code>&lt;sub&gt;</code> pozwala dodać subskrypt, np. H<sub>2</sub>O.</li>
+		  <li style="margin-top:0;"><code>&lt;sup&gt;</code> pozwala dodać superskrypt, np. E=mc<sup>2</sup>.</li>
+		  <li><code>&lt;time datetime="..."&gt;</code> pozwala, oprócz czasu czytelnego dla człowieka, podać czas czytelny dla przeglądarki. Nie ma to żadnego formatowania, lecz ma zastosowanie techniczne. 
+		  <pre class="cb">&lt;time datetime="2026-04-23"&gt;23 kwietnia 2026&lt;/time&gt;</li>
+		  <li><code>&lt;var&gt;</code> określa zmienną, np. matematyczną.</code></li>
+		</ul>
+		<h2>Formatowanie z CSS</h2>
+		<p>Teraz, gdy zapoznaliśmy się z podstawowym formatowaniem, możemy się zająć zadaniami, do których zwykle używa się CSSa.</p>
+		<h3>Zmiana wielkości czcionki</h3>
+		<p>Najprostszy sposób zmiany wielkości czcionki choć nie popularny sposób to użycie specjalnych znaczników. <code>&lt;small&gt;</code> pozwala na zmniejszenie tekstu, a <code>&lt;big&gt;</code> na zwiększenie. <code>&lt;small&gt;</code> jest też znacznikiem semantycznym oznaczającym komentarze i informacje prawne/o prawach autorskich. Trzeba się jednak wystrzegać <code>&lt;big&gt;</code>, bo jest przestarzały i nie jest już częścią standardu HTML5.</p>
+		<p>Innym sposobem jest właściwość <code>font-size</code>. Możliwości to:</p>
+		<ul>
+		  <li>piksele (np. <code>2px</code>) - Pozwalają ściśle kontrolować wielkość czcionki. Jest zawsze taka sama, niezależnie od rozmiaru ekranu czy ustawień przeglądarki.</li>
+		  <li>procenty (np. <code>10%</code>) - Wielkość czcionki względem elementu nadrzędnego, w procentach.</li>
+		  <li><code>em</code> i <code>rem</code> - Pierwsze względem elementu nadrzędnego, drugie względem rootu <code>&lt;html&gt;</code>. Oba mogą być skalowane ustawieniami przeglądarki.
+		  <li>Inne jednostki.</li>
+		  <li><code>xx-small</code>, <code>x-small</code>, <code>small</code>, <code>medium</code>, <code>large</code>, <code>x-large</code> i <code>xx-large</code>. Wielkości te są zależne od domyślnych ustawień przeglądarki.
+		  <li><code>smaller</code> i <code>larger</code>. Oba względem elementu nadrzędnego. Zależne od domyślnych ustawień przeglądarki.</li>
+		</ul>
+		<h3>Indentacja</h3>
+		<p><code>text-indent</code> pozwala na indentację tekstu:</p>
+		<samp>
+		  <p style="margin-bottom:8px;">Jak widzicie, ten tekst jest bez indentacji. Niestety, nie wszyscy ludzie stosują indentację. Może jestem oszalały, ale chciałbym, żeby indentacja była stosowana absolutnie wszędzie, gdzy to tylko możliwe. A może jestem tylko jakimś hipokrytą, bo na tej stronie wcale nie ma indentacji...</p>
+		  <p style="text-indent:30px;">Jak widać, ten tekst już ma indentację. Nie muszę pisać tu tego samego tekstu, bo różnicę widać gołym okiem. Uroczyście przysięgam, że nie skopiowałem znikąd tego tekstu ani nie użyłem AI do napisania tego przykładu. Dobrze, już dobrze, dajcie mi spokój i idźcie stąd.</p>
+		</samp>
+		<p>(Przykład nr 2 ma wartość <code>30px</code>.)</p>
+		<h3>Wyrównanie tekstu</h3>
+		Jest kilka możliwych wartości atrybutu <code>text-align</code>, który kontroluje wyrównanie tekstu:
+		<p><code>left</code> wyrównuje do lewej:</p>
+		<pre class="cb">Tekst po lewej!</pre>
+		<p><code>center</code> wyrównuje do środka:</p>
+		<pre class="cb" style="text-align:center;">Tekst pośrodku!</pre>
+		<p><code>right</code> wyrównuje do prawej:</p>
+		<pre class="cb" style="text-align:right;">Tekst po prawej!</pre>
+		<p><code>justify</code> jest bardziej skomplikowane. Wykonuje ono tzw. justyfikację, czyli wyrównanie tekstu, tak by wypełniał jak największą przestrzeń:</p>
+		<samp>
+		  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Wyrównane do lewej.</p>
+		  <p style="text-align:justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justyfikowane.</p>
+		</samp>
+		<h3 id="div_span"><code>&lt;div&gt;</code> i <code>&lt;span&gt;</code></h3>
+		<p>Te dwa znaczniki same w sobie nie mają żadnego wyglądu. Pierwszy jest blokowy, podczas gdy drugi jest liniowy. Są one bezużyteczne bez CSS, i specjalnie przeznaczone do stylowania.</p>
+		<p><code>&lt;span&gt;</code> jest używany do stylowania tekstu, a <code>&lt;div&gt;</code> do układów stron.</p>
+	  </div>
+    </main>
+    <footer>© 2026 Adrian Włodarski</footer>
+	<script src="../scripts/nav.js"></script>
+  </body>
+</html>
