@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pl-pl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.07">
+    <title>Formularze</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>Formularze</h1>
+    </header>
+    <main>
+      <nav></nav>
+      <div id="content">
+	    <p>Formularze są jedną z najważniejszych funkcji HTML. Dziś się nauczymy, jak je tworzyć.</p>
+		
+		<h2>Znacznik <code>&lt;form&gt;</code></h2>
+		<p>Formularze tworzy się za pomocą <code>&lt;form&gt;</code>:</p>
+		<pre class="cb">&lt;form&gt;
+...
+&lt;/form&gt;</pre>
+		<p>Można ustawić, co się stanie, gdy formularz zostanie uzupełniony, za pomocą atrybutów:</p>
+		<ul>
+		  <li><code>action</code> - pozwala określić, gdzie formularz zostanie wysłany.</li>
+		  <li><code>method</code> - określa, w jaki sposób dane zostaną wysłane. Z <code>get</code> dane zostaną zawarte w URL, a z <code>post</code> zostaną one wysłane za pomocą HTTP.</li>
+		  <li><code>autocomplete</code> - czy dane będą automatycznie uzupełnione przez przeglądarkę? <code>on</code> znaczy tak, a <code>off</code> znaczy nie.</li>
+		  <li><code>novalidate</code> - atrybut logiczny, który sprawia, że formularz jest sprawdzany pod względem poprawności.<br>
+		  <pre class="cb" style="display:inline-block;">&lt;form novalidate&gt;</pre></li>
+		</ul>
+		<h3>Wysyłanie i resetowanie formularza</h3>
+		<p>Są dwa sposoby, by stworzyć przycisk wysyłający formularz:</p>
+		<pre class="cb">&lt;input type="submit" value="..." /&gt;
+&lt;button type="submit"&gt;...&lt;/button&gt;</pre>
+		<p>Gdzie <code>...</code> to tekst pokazywany na przycisku. Podobnie z przyciskiem resetującym formularz, tylko <code>type="reset"</code>. <code>submit</code> jest domyślne w <code>&lt;button&gt;</code>.</p>
+		
+		<h2>Znacznik <code>&lt;input&gt;</code></h2>
+		<p><code>&lt;input /&gt;</code> jest podstawowym znacznikiem samodzielnym w formularzach. Pokrywa on zdecydowaną większość rodzajów wejścia.</p>
+		<h3>Atrybuty <code>&lt;input&gt;</code></h3>
+		<p><code>&lt;input&gt;</code> ma różne atrybuty:</p>
+		<ul>
+		  <li><code>name</code> identyfikuje element, pozwalając na odczytanie jego wartości po wysłaniu formularza. To NIE jest równoznaczne <code>id</code>.</li>
+		  <li><code>value</code> to domyślny tekst elementu.</li>
+		  <li><code>readonly</code> (logiczny) sprawia, że element jest tylko do odczytu.</li>
+		  <li><code>disabled</code> (logiczny) sprawia, że jakakolwiek interakcja z elementem jest niemożliwa. Nie może być on zaznaczony za pomocą <kbd>Tab</kbd>, nie jest on także wysyłany wraz z formularzem.</li>
+		  <li><code>tabindex</code> pozwala na określenie, który w kolejności zaznaczania jest przy pomocy <kbd>Tab</kbd>.</li>
+		  <li><code>size</code> teorytycznie wyraża "szerokość w znakach", w praktyce jednak to się mija z prawdą. Niezalecane, lepiej ustawić szerokość za pomocą CSS.</li>
+		  <li><code>maxlength</code> ustala maksymalną liczbę znaków, które można wpisać w pole.</li>
+		  <li><strong><code>required</code></strong> (logiczny) sprawia, że wybranie lub wpisanie wartości jest wymagane.</li>
+		  <li><code>placeholder</code> pozwala na wyświetlenie szarawego tekstu, który zniknie gdy użytkownik zacznie pisać.</li>
+		</ul>
+		<h3><code>&lt;label&gt;</code></h3>
+		<p>Znacznik <code>&lt;label&gt;</code> pozwala opisać element formularza tekstem. Atrybut <code>for="..."</code> pozwala ustalić, elementowi z jakim <code>id</code> się przypisuje tekst.</p>
+		<pre class="cb">&lt;label for="imie"&gt;Imię: &lt;/label&gt;
+&lt;input id="imie" name="imie" /&gt;</pre>
+		<form><label for="sample1">Imię: </label><input id="sample1" /></form>
+		<h3>Atrybut <code>type</code></h3>
+		<p>Pole <code>&lt;input&gt;</code> może się zachowywać w różny sposób, w zależności od atrybutu <code>type</code>:</p>
+		<ul>
+		  <li><code>"text"</code> (w. domyślna) pozwala na wpisanie tekstu.
+		  <form><input /></form></li>
+		  <li><code>"password"</code> pozwala na wpisanie tekstu, który nie będzie widoczny na ekranie (zamiast tego będą widoczne kropki). Nie zaleca się przesyłania poufnych danych poprzez <code>method="get"</code>.
+		  <form><input type="password" /></form></li>
+		  <li>W <code>"email"</code> można wpisać e-mail. Zawartość jest sprawdzana pod względem poprawności składniowej.
+		  <form><input type="email" /></form></li>
+		  <li>W <code>"tel"</code> można wpisać numer telefonu. Zawartość <em>nie</em> jest sprawdzana pod względem poprawności składniowej.</code></li>
+		  <li>W <code>"url"</code> można wpisać URL strony internetowej. Zawartość jest sprawdzana. Zauważ, że wartość musi się zaczynać od <kbd>https://</kbd>.
+		  <form><input type="url" /></form></li>
+		  <li>W <code>"date"</code> można wpisać lub wybrać datę.</li>
+		  <form><input type="date" /></form></li>
+		  <li>W <code>"number"</code> można wpisać liczbę. Zawartość jest sprawdzana. Można ograniczyć możliwe liczby poprzez atrybuty: <code>min</code> ustala minimalną wartość, <code>max</code> ustala maksymalną, a <code>step</code>, co iloma liczbami znajdują się prawidłowe wartości.</li>
+		  <form><input type="number" /></form></li>
+		  <li><code>range</code> jest analogiczne do <code>number</code>, ale ma formę suwaka:
+		  <form><input type="range" /></form></li>
+		  <li><code>color</code> pozwala wybrać kolor:
+		  <form><input type="color" /></form></li>
+		  <li><code>hidden</code> nie wyświetla się na stronie, ale jest wysyłane wraz z formularzem.</li>
+		  <li><code>file</code> pozwala wybrać pliki. Dodaj atrybut logiczny <code>multiple</code>, aby móc wybrać wiele plików.
+		  <form><input type="file" /></form></li>
+		  <li><code>image</code> działa jak <code>submit</code>, ale ma wygląd obrazka wskazanego atrybutem <code>src</code>. Alternatywa to:
+		  <pre class="cb">&lt;button&gt;&lt;img src="..." /&gt;&lt;/button&gt;</pre>
+		</ul>
+		<h3>Pola wyboru za pomocą <code>&lt;input&gt;</code></h3>
+		<ul>
+		  <li><code>type="checkbox"</code> pozwala na zaznaczenie więcej niż jednej opcji. <code>name</code> określa indywidualną nazwę opcji, a <code>value</code> (opcjonalne) określa wartość, którą przyjmuje gdy działa:
+		  <pre class="cb">&lt;label for="check"&gt;Czy umiesz?&lt;/label&gt;
+&lt;input type="checkbox" id="check" name="check" /&gt;</pre>
+		  <form><label><input type="checkbox" /> Czy umiesz?</label></form></li>
+		  <li><code>type="radio"</code> pozwala na zaznaczenie tylko jednej opcji. <code>name</code> określa nazwę całego pola wyboru (i musi być takie same dla każdej opcji), a <code>value</code> określa nazwę opcji. Jako że odznaczenie opcji nie jest domyślnie możliwe, najlepiej umieścić przycisk resetujący wewnątrz formularza:
+		  <pre class="cb">&lt;label for="psy"&gt;Wolę psy&lt;/label&gt;
+&lt;input type="radio" id="psy" name="preferencja" value="psy"/&gt;
+&lt;label for="koty"&gt;Wolę koty&lt;/label&gt;
+&lt;input type="radio" id="koty" name="preferencja" value="koty"/&gt;</pre>
+		  <form>
+		    <label><input type="radio" name="cw" /> Wolę psy</label>
+		    <label><input type="radio" name="cw" /> Wolę koty</label>
+			<input type="reset" value="Odznacz" />
+		  </form></li>
+		</ul>
+		<h2>Inne elementy</h2>
+		<ul>
+		  <li><code>&lt;textarea&gt;</code> pozwala na wpisanie dłuższego tekstu. Atrybut <code>cols</code> określa szerokość, a <code>rows</code> - wysokość. Jest to znacznik kontenerowy, a wpisany w środku tekst jest tam wpisany początkowo.
+		  <form><textarea placeholder="Wpisz tu coś!"></textarea></li>
+		  <li><code>&lt;select&gt;</code> pozwala na stworzenie listy typu dropdown. Atrybut <code>name</code> jest nazwą listy. Wyborami są <code>&lt;option&gt;</code>, których <code>value</code> są nazwami opcji. Możesz dodać atrybut logiczny <code>multiple</code>, jeśli chcesz, by można było obliczyć wiele opcji.
+		  <pre class="cb">&lt;label&gt;Wybierz opcję:
+&lt;select id="lista" name="lista"&gt;
+  &lt;option value="opcja1"&gt;Opcja 1&lt;/option&gt;
+  &lt;option value="opcja2"&gt;Opcja 2&lt;/option&gt;
+  &lt;option value="opcja3"&gt;Opcja 3&lt;/option&gt;
+&lt;/select&gt;&lt;/label&gt;</pre>
+		  <form>
+		    <label>Wybierz listę: <select>
+		      <option>Opcja 1</option>
+			  <option>Opcja 2</option>
+			  <option>Opcja 3</option>
+			</select></label>
+		  </form></li>
+		  <li><code>&lt;fieldset&gt;</code> pozwala na stworzenie ładnej ramki dla formularza. Znacznik podrzędny <code>&lt;legend&gt;</code> zawiera wyświetlaną nazwę formularza.
+		  <pre class="cb">&lt;form&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;...&lt;/legend&gt;
+    ...
+  &lt;/fieldset&gt;
+&lt;/form&gt;</pre>
+		  <form>
+		    <fieldset>
+			  <legend>Dane osobowe</legend>
+			  <p>Zamierzam je nielegalnie zgromadzić, by sprzedać je Google za prawdziwe pieniądze! Ha, ha, ha!!!</p>
+			  <label>Imię: <input name="imie" /></label>
+			  <label>Nazwisko: <input name="nazwisko" /></label>
+			  <input type="submit" value="Wyślij" />
+			</fieldset>
+	      </form></li>
+		  <li><code>&lt;datalist&gt;</code> pozwala na stworzenie listy, jak <code>&lt;select&gt;</code>, lecz <code>&lt;datalist&gt;</code> umożliwia także własnoręczne wpisanie wartości. Atrybut <code>name</code> jest nazwą listy. Wyborami są <code>&lt;option&gt;</code>, których <code>value</code> są nazwami opcji. Możesz dodać atrybut logiczny <code>multiple</code>, jeśli chcesz, by można było obliczyć wiele opcji.
+		  <pre class="cb">&lt;label&gt;Wybierz opcję:
+&lt;select id="lista" name="lista"&gt;
+  &lt;option value="opcja1"&gt;Opcja 1&lt;/option&gt;
+  &lt;option value="opcja2"&gt;Opcja 2&lt;/option&gt;
+  &lt;option value="opcja3"&gt;Opcja 3&lt;/option&gt;
+&lt;/select&gt;&lt;/label&gt;</pre>
+		  <form>
+		    <label>Wybierz listę: <select>
+		      <option>Opcja 1</option>
+			  <option>Opcja 2</option>
+			  <option>Opcja 3</option>
+			</select></label>
+		  </form></li>
+		</ul>
+      </div>
+	</main>
+    <footer>© 2026 Adrian Włodarski</footer>
+	<script src="../scripts/nav.js"></script>
+  </body>
+</html>
