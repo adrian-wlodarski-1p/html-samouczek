@@ -36,7 +36,6 @@
 		
 		<h2>Znacznik <code>&lt;input&gt;</code></h2>
 		<p><code>&lt;input /&gt;</code> jest podstawowym znacznikiem samodzielnym w formularzach. Pokrywa on zdecydowaną większość rodzajów wejścia.</p>
-		<h3>Atrybuty <code>&lt;input&gt;</code></h3>
 		<p><code>&lt;input&gt;</code> ma różne atrybuty:</p>
 		<ul>
 		  <li><code>name</code> identyfikuje element, pozwalając na odczytanie jego wartości po wysłaniu formularza. To NIE jest równoznaczne <code>id</code>.</li>
@@ -99,7 +98,8 @@
 		</ul>
 		<h2>Inne elementy</h2>
 		<ul>
-		  <li><code>&lt;textarea&gt;</code> pozwala na wpisanie dłuższego tekstu. Atrybut <code>cols</code> określa szerokość, a <code>rows</code> - wysokość. Jest to znacznik kontenerowy, a wpisany w środku tekst jest tam wpisany początkowo.
+		  <li><code>&lt;textarea&gt;</code> pozwala na wpisanie dłuższego tekstu. Atrybut <code>cols</code> określa szerokość, a <code>rows</code> - wysokość. Jest to znacznik kontenerowy, a wpisany w środku tekst jest początkową zawartością pola.
+		  <small>Poniżej jest zastosowany atrybut <code>placeholder</code>.</small>
 		  <form><textarea placeholder="Wpisz tu coś!"></textarea></li>
 		  <li><code>&lt;select&gt;</code> pozwala na stworzenie listy typu dropdown. Atrybut <code>name</code> jest nazwą listy. Wyborami są <code>&lt;option&gt;</code>, których <code>value</code> są nazwami opcji. Możesz dodać atrybut logiczny <code>multiple</code>, jeśli chcesz, by można było obliczyć wiele opcji.
 		  <pre class="cb">&lt;label&gt;Wybierz opcję:
@@ -109,7 +109,7 @@
   &lt;option value="opcja3"&gt;Opcja 3&lt;/option&gt;
 &lt;/select&gt;&lt;/label&gt;</pre>
 		  <form>
-		    <label>Wybierz listę: <select>
+		    <label>Wybierz opcję: <select>
 		      <option>Opcja 1</option>
 			  <option>Opcja 2</option>
 			  <option>Opcja 3</option>
@@ -131,15 +131,16 @@
 			  <input type="submit" value="Wyślij" />
 			</fieldset>
 	      </form></li>
-		  <li><code>&lt;datalist&gt;</code> pozwala na stworzenie listy, jak <code>&lt;select&gt;</code>, lecz <code>&lt;datalist&gt;</code> umożliwia także własnoręczne wpisanie wartości. Atrybut <code>name</code> jest nazwą listy. Wyborami są <code>&lt;option&gt;</code>, których <code>value</code> są nazwami opcji. Możesz dodać atrybut logiczny <code>multiple</code>, jeśli chcesz, by można było obliczyć wiele opcji.
-		  <pre class="cb">&lt;label&gt;Wybierz opcję:
-&lt;select id="lista" name="lista"&gt;
+		  <li><code>&lt;datalist&gt;</code> pozwala na stworzenie przypisanie listy predefiniowanych opcji do znacznika <code>&lt;inputgt;</code>. Podobnie jak <code>&lt;select&gt;</code>, zawiera <code>&lt;option&gt;</code> jako opcje. Na znaczniku <code>&lt;input&gt;</code> są atrybuty: <code>list</code> i <code>name</code>. Atrybut <code>list</code> na <code>&lt;input&gt;</code> musi być taki sam jak ID <code>&lt;datalist&gt;</code>. Wyborami są <code>&lt;option&gt;</code>, których <code>value</code> są nazwami opcji.
+		  <pre class="cb">&lt;label&gt;Wpisz lub wybierz opcję:
+&lt;input list="opcje" name="opcja" /&gt;
+&lt;datalist id="lista"&gt;&lt;/label&gt;
   &lt;option value="opcja1"&gt;Opcja 1&lt;/option&gt;
   &lt;option value="opcja2"&gt;Opcja 2&lt;/option&gt;
   &lt;option value="opcja3"&gt;Opcja 3&lt;/option&gt;
-&lt;/select&gt;&lt;/label&gt;</pre>
+&lt;/datalist&gt;</pre>
 		  <form>
-		    <label>Wybierz listę: <select>
+		    <label>Wpisz lub wybierz opcję: <select>
 		      <option>Opcja 1</option>
 			  <option>Opcja 2</option>
 			  <option>Opcja 3</option>
