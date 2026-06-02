@@ -34,14 +34,14 @@ nav a {
   display: inline-block;
   position: relative;
   width: 248px;
-  height: 40px;
+  height: 33px;
   border-right: 2px solid black;
   border-bottom: 2px solid black;
   background: white;
   color: black;
   text-decoration: none;
   text-align: center;
-  line-height: 40px;
+  line-height: 33px;
 }
 nav ul ul a {
   border-left: 2px solid black;
@@ -51,29 +51,28 @@ nav svg {
   position: absolute;
   right: 0px;
 }
-#content { width: calc(100vw - 250px); }
-#content ul, #content ol {
+#content {
+  width: calc(100vw - 250px);
+}
+#content ul, ol {
   margin: 10px;
   margin-left: 35px;
 }
 dt { font-weight: bold; }
 dd { margin-left: 35px; }
-p, h2, h3, #content li { margin: 5px; }
-h2 { font-size: 1.5em; }
-h3 { font-size: 1.35em; }
-code, .cd, pre.cb {
+p, h2, h3, #content li, dl, form, label { margin: 5px; }
+h2, h3 { margin-top: 12px; }
+fieldset { padding-bottom: 5px; }
+code, .cd, pre.cb, kbd {
   font-family: monospace;
   font-size: 115%;
 }
-.box, .ibox { display: inline-block; }
-.box {
-  width: 100px;
-  height: 100px;
+.ib {
+  display: inline-block;
+  margin: 0;
 }
-.red { background: red; }
-.green { background: green; }
-.blue { background: blue; }
-.cyan { background: cyan; }
+.red { color: red; }
+.green { color: green; }
 samp {
   display: block;
   max-width: 706px;
@@ -101,6 +100,7 @@ table, th, td {
   border: 2px solid black;
   padding: 3px 5px;
 }
+table { max-width: 90%; }
 .img {
   position: absolute;
   display: flex;
@@ -135,7 +135,7 @@ footer {
 }
 @media (max-width:700px) {
   main { flex-direction: column; }
-  main, nav, #content { width: 100vw; }
+  main, nav, #content { width: 97vw; }
   #content {
     min-height: 70vh;
   }
