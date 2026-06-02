@@ -13,41 +13,52 @@
     <main>
       <nav></nav>
       <div id="content">
-        <p>Listy pozwalają wylistować elementy. Oto lista nieuporządkowana:</p>
+	    <p>Listy pozwalają wylistować elementy.</p>
+		<h2>Rodzaje list</h2>
+		
+		<h3>Nieuporządkowana</h3>
+        <p>Listę nieuporządkowaną tworzy się za pomocą <code>&lt;ul&gt;</code>. Elementy listy tworzy się za pomocą znacznika <code>&lt;li&gt;</code>:</p>
         <pre class="cb">&lt;ul&gt;
   &lt;li&gt;Element 1&lt;/li&gt;
   &lt;li&gt;Element 2&lt;/li&gt;
   &lt;li&gt;Element 3&lt;/li&gt;
 &lt;/ul&gt;</pre>
-        <samp><ul>
-          <li>Element 1</li>
-          <li>Element 2</li>
-          <li>Element 3</li>
-        </ul></samp>
-        <p>A oto lista uporządkowana:</p>
+
+        <h3>Uporządkowana</h3>
+        <p>Listę uporządkowaną tworzy się za pomocą <code>&lt;ol&gt;</code>. Elementy listy tworzy się za pomocą znacznika <code>&lt;li&gt;</code>:</p>
         <pre class="cb">&lt;ol&gt;
   &lt;li&gt;Element 1&lt;/li&gt;
   &lt;li&gt;Element 2&lt;/li&gt;
   &lt;li&gt;Element 3&lt;/li&gt;
 &lt;/ol&gt;</pre>
-        <samp><ol>
-          <li>Element 1</li>
-          <li>Element 2</li>
-          <li>Element 3</li>
-        </ol></samp>
-		<p>Istnieją też tzw. listy definicji:</p>
+
+        <h3>Lista definicji</h3>
+		<p>Listę definicji tworzy się za pomocą <code>&lt;dl&gt;</code>. Elementy listy mają postać par <code>&lt;dt&gt;</code>-<code>&lt;dd&gt;</code>, gdzie w <code>&lt;dt&gt;</code> jest definiowany termin, a w <code>&lt;dd&gt;</code> jest definicja:</p>
 	    <pre class="cb">&lt;dl&gt;
   &lt;dt&gt;Herbata&lt;/dt&gt;
   &lt;dd&gt;Jest to taki napój.&lt;/dd&gt;
   &lt;dt&gt;Kawa&lt;/dt&gt;
   &lt;dd&gt;Jest to taki inny napój, ale z kofeiną.&lt;/dd&gt;
 &lt;/dl&gt;</pre>
-        <samp><dl>
+        <dl>
 		  <dt>Herbata</dt>
 		  <dd>Jest to taki napój.</dd>
 		  <dt>Kawa</dt>
 		  <dd>Jest to taki inny napój, ale z kofeiną.</dd>
-		</dl></samp>
+		</dl>
+		
+		<h2>Formatowanie list</h2>
+		<p>Listy mogą być formatowane za pomocą <code>list-style</code>, które jest zbiorową kategorią dla trzech właściwości:</p>
+		
+		<h3><code>list-style-type</code></h3>
+		<p>Jest to podstawowa właściwość, która pozwala zmienić wygląd symbolów znajdujących się przed elementami listy. Poniżej listuję najbardziej podstawowe wartości:</p>
+		<p style="color:red;font-weight:bold;">TODO!!!</p>
+		
+		<h3><code>list-style-image</code></h3>
+		<p style="color:red;font-weight:bold;">TODO!!!</p>
+		
+		<h3><code>list-style-position</code></h3>
+		<p style="color:red;font-weight:bold;">TODO!!!</p>
       </div>
 	</main>
     <footer>© 2026 Adrian Włodarski</footer>
