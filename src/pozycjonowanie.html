@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pl-pl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.07">
+    <title>Pozycjonowanie</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>Pozycjonowanie</h1>
+    </header>
+    <main>
+      <nav></nav>
+      <div id="content">
+        <p>Teraz już, gdy przerobiliśmy tak wiele rzeczy, jest czas, by nauczyć się w pełni kontrolować pozycję elementów i zajmowaną przez nie przestrzeń.</p>
+		
+		<h2>Wygląd i przestrzeń elementu</h2>
+	    <h3><code>width</code> i <code>height</code></h3>
+	    <p>Są to dwie najbardziej podstawowe właściwości znaczników blokowych. Ich działanie jest proste - ustawiają szerokość i wysokość elementu. Najczęściej mierzy się je w pikselach:</p>
+		<pre class="cb">div {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
+&lt;div&gt;&lt;/div&gt;</pre>
+		<p>Choć dozwolone są też procenty, mierzone względem elementu nadrzędnego:</p>
+		<pre class="cb">#parent {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
+#child {
+  width: 50%;
+  height: 50%;
+  background-color: red;
+}
+&lt;div id="parent"&gt;
+  &lt;div id="child"&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+		<p>Szczegóły mierzenia wielkości w innych jednostkach są przedstawione <a href="materialy.html#jednostki">gdzie indziej</a>.</p>
+		<p>Jest także kilka interesujących wartości nie-numerycznych. Pierwszą z nich jest <code>auto</code>, które sprawia, że wielkość bloku sama dostosowuje się do okoliczności:</p>
+		<pre class="cb">div {
+  width: auto; /* domyślne */
+  /* height także domyślnie wynosi auto */
+  background-color: cyan;
+}
+&lt;div&gt;Wielkość tego bloku dopasowuje się do tekstu. Jest to zachowanie domyślne.&lt;/div&gt;</pre>
+		<p>Zauważmy, że blok zajmuje domyślnie całą dostępną szerokość. By temu zapobiec, można użyć <code>display:</code> <code>inline-block</code>.</p>
+		<p><code>width</code> i <code>height</code> mogą przyjmować wartość <code>inherit</code>, w przypadku których jest ona jednak bezużyteczna.</p>
+		<h3>Kontrola automatycznych wielkości</h3>
+		<p>Okej, ale co jeśli chcemy, by szerokość lub wysokość zmieniała się w razie potrzeb, ale nie przekraczała pewnych wartości? Jeśli <code>width</code> lub <code>height</code> jest ustawione na <code>auto</code>, to możemy regulować ich wartość za pomocą czterech właściwości:</p>
+		<ul>
+		  <li><code>min-width</code> określa najmniejszą możliwą szerokość elementu.</li>
+		  <li><code>max-width</code> określa największą możliwą szerokość elementu.</li>
+		  <li><code>min-height</code> określa najmniejszą możliwą wysokość elementu.</li>
+		  <li><code>max-width</code> określa największą możliwą wysokość elementu.</li>
+		</ul>
+		<h3><code>margin</code> i <code>padding</code></h3>
+		<p>Są to dwie bardzo ważne właściwości.</p>
+		<p><code>margin</code> określa, ile jest miejsca wokół elementu:</p>
+		<pre class="cb">div {
+  margin: 10px;
+  background-color: cyan;
+}
+&lt;div&gt;Ten blok lubi mieć trochę miejsca wokół siebie.&lt;/div&gt;</pre>
+		<p><code>padding</code> określa, ile miejsca jest wewnątrz elementu, ale wokół zawartości:</p>
+		<pre class="cb">div {
+  padding: 10px;
+  background-color: cyan;
+}
+&lt;div&gt;Ten blok jest bardzo przy kości, ale nie mów mu o tym.&lt;/div&gt;</pre>
+		<h3 id="border"><code>border</code></h3>
+		
+		<p><code>border</code> jest to właściwość, która pozwala wyświetlać obramowanie dookoła dowolnego elementu. Przyjmuje ona aż trzy wartości: szerokość obramowania (z jednostką, <code>border-width</code>), typ obramowania (<code>border-style</code>) i kolor (<code>border-color</code>):</p>
+		<pre class="cb">border: 3px solid black;</pre>
+		<p>Równoznaczne:</p>
+		<pre class="cb">border-width: 3px;
+border-style: solid;
+border-color: black;</pre>
+		<ul>
+		  <li><code>border-width</code> pozwala na ustawienie szerokości obramowania.</li>
+		  <li><code>border-style</code> pozwala na zmianę stylu obramowania. Jest kilka wartości możliwości:
+		  <ul style="margin-top:0;margin-bottom:0;">
+		    <li><code>none/hidden</code> - brak</li>
+		    <li><code>solid</code> - jednolite</li>
+		    <li><code>dotted</code> - kropkowane</li>
+		    <li><code>dashed</code> - kreskowane</li>
+		    <li><code>double</code> - podwójne<dd>
+		  </ul></li>
+		  <li><code>border-color</code> określa kolor obramowania (słownie lub kod hex).</li>
+		</ul></li>
+		
+		<h3><code>box-sizing: border-box</code></h3>
+		<p>Czasem podczas kodowania możesz się natknąć na jeden problem: <code>padding</code> i <code>border</code> zwiększają wyświetlaną szerokość i wysokość, więc <code>width</code> i <code>height</code> mogą nie odzwierciedlać prawdziwej wielkości elementu:</p>
+		<pre class="cb">div {
+  width: 100px;
+  height: 100px;
+}
+#one { padding: 0; background: red; }
+#two { padding: 25px; background: blue; }
+&lt;div id="one"&gt;&lt;div id="two"&gt;</pre>
+		<p>Lecz ustawiając właściwość <code>box-sizing</code> na <code>border-box</code>, można temu zapobiec. Zmienia to sposób obliczania rozmiarów elementu, tak że <code>padding</code> i <code>border</code> są już w nich uwzględnione:</p>
+		<pre class="cb">div {
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+}
+#one { padding: 0; background: red; }s
+#two { padding: 25px; background: blue; }</pre>
+		<h3>Właściwości kierunkowe</h3>
+		<p>Można ustawić, by <code>margin</code>, <code>padding</code> lub <code>border</code> wpływały na tylko jedną stronę elementu, poprzed dodanie <code>-left</code>, <code>-right</code>, <code>-top</code> lub <code>-bottom</code> na końcu, ale przed przyrostkiem. Na przykład margin stosowane tylko po lewej to <code>margin-left</code>, ale zmiana koloru <code>border</code>u tylko po prawej to już <code>border-right-color</code>.</p>
+		
+		<h2>Pozycjonowanie</h2>
+		<p>Tak właściwie, to <dfn>pozycjonowanie</dfn> to sztuka ustawiania pozycji elementu. Tego się właśnie teraz nauczymy.</p>
+		
+		<h3>Właściwość <code>position</code></h3>
+		<p>By móc korzystać z pozycjonowania, musisz skorzystać z właściwości <code>position</code>. Jest pięć głównych wartości:</p>
+		<ul>
+		  <li><code>static</code> jest domyślne. W takim przypadku pozycjonowanie jest niedostępne.</li>
+		  <li>Element z <code>relative</code> zachowuje się normalnie, z wyjątkiem tego, że można go przesunąć za pomocą właściwości pozycji. Oryginalna pozycja elementu wpływa na inne elementy.</li>
+		  <li><code>absolute</code> kompletnie wyłącza element z flowu, tak że on nie wpływa na inne elementy. Domyślnie jest on ustawiony tam, gdzie zwykle, ale dodanie właściwości pozycji sprawia, że przyjmuje on pozycję względem strony, niezależnie od tego gdzie był wcześniej.</li>
+		  <li><code>fixed</code> wyłącza element z flowu i uzależnia jego pozycję od okna przeglądarki. Najdziwniejsze jest to, że taki element nie zmienia pozycji, gdy strona jest przewijana. Domyślnie jego pozycja względem okna przeglądarki jest taka sama, jak początkowo obliczona na podstawie pozycji w dokumencie, ale dodanie właściwości pozycji sprawia, że przyjmuje on określoną pozycję względem okna przeglądarki, niezależnie od tego, gdzie poprzednio był.</li>
+		  <li><code>sticky</code> jest chyba najdziwniejszym pozycjoowaniem. Dopóki element jest w całości wyświetlony w oknie przeglądarki, zachowuje się on jak <code>relative</code> (ale nie przesunięte), lecz w chwili, gdy tylko zbliży się do granicy okna przeglądarki na określoną odległość, to dopóki normalnie byłby za tą granicą, dopóty zachowuje się jak <code>fixed</code>. Właściwości pozycji określają, jak blisko których brzegów przeglądarki element może się zbliżyć.</li>
+		</ul>
+		
+		<h3>Właściwości pozycji</h3>
+		<p>Są cztery właściwości pozycji. Ich znaczenie jest zależne od <code>position</code>.</p>
+		<ul>
+		  <li><dfn class="cd">relative</dfn> - Przesuwają element w określonym kierunku.</li>
+		  <li><dfn class="cd">absolute</dfn> - Ustawiają element względem określonego brzegu strony.</li>
+		  <li><dfn class="cd">fixed</dfn> - Ustawiają element względem określonego brzegu okna przeglądarki.</li>
+		  <li><dfn class="cd">sticky</dfn> - Określają, w jakiej odległości od określonego brzegu okna przeglądarki element może się znaleźć.</li>
+		</ul>
+		<p><code>top</code> oznacza górę, <code>bottom</code> - dół, <code>left</code> - lewą, a <code>right</code> - prawą. Wartości ujemne są dozwolone.</p>
+		
+		<h3>Pozycjonowanie względem elementu</h3>
+		<p>Przedstawiliśmy już cztery rodzaje pozycjonowania: względem samego siebie, względem strony, względem okna przeglądarki i mieszane. Istnieje jednak też możliwość pozycjonowania elementu względem innego elementu. By to osiągnąć, podejmij następujące kroki:</p>
+		<ul>
+		  <li>Ustaw <code>relative</code> na elemencie nadrzędnym,</li>
+		  <li>ustaw <code>absolute</code> na pozycjonowanym elemencie.</li>
+		</ul>
+      </div>
+	</main>
+    <footer>© 2026 Adrian Włodarski</footer>
+	<script src="../scripts/nav.js"></script>
+  </body>
+</html>
