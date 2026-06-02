@@ -9,7 +9,6 @@ let text = `
           <li><a href="./tabele.html">Tabele</a></li>
           <li><a href="./pozycjonowanie.html">Pozycjonowanie</a></li>
 		  <li><a href="./formularze.html">Formularze</a></li>
-		  <li><a href="./zaawansowane.html">Zaawansowane</a></li>
 		  <li><a href="./materialy.html">Materiały</a></li>
         </ul>
 `
