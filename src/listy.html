@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.07">
     <title>Listy</title>
     <link rel="stylesheet" href="../styles.css">
+	<style>
+	.nu { margin-top: 0; }
+	.nd { margin-bottom: 0; }
+	</style>
   </head>
   <body>
     <header>
@@ -52,7 +56,23 @@
 		
 		<h3><code>list-style-type</code></h3>
 		<p>Jest to podstawowa właściwość, która pozwala zmienić wygląd symbolów znajdujących się przed elementami listy. Poniżej listuję najbardziej podstawowe wartości:</p>
-		<p style="color:red;font-weight:bold;">TODO!!!</p>
+		<ul class="nd" style="list-style-type: disc;">
+		  <li><code>disc</code> to zapełnione kółko. Domyślna wartość dla list nieuporządkowanych.</li></ul>
+		<ul class="nu nd" style="list-style-type: circle;">
+		  <li><code>disc</code> to puste kółko. Domyślna wartość dla podlist nieuporządkowanych.</li></ul>
+		<ul class="nu nd" style="list-style-type: square;">
+		  <li><code>disc</code> to kwadrat.</li></ul>
+		<ul class="nu nd" style="list-style-type: decimal;">
+		  <li><code>decimal</code> to liczba. Domyślna wartość dla list uporządkowanych.</li></ul>
+		<ul class="nu nd" style="list-style-type: lower-alpha;">
+		  <li><code>lower-alpha</code> lub <code>lower-latin</code> to mała litera. Domyślna wartość dla podlist uporządkowanych.</li></ul>
+		<ul class="nu nd" style="list-style-type: upper-alpha;">
+		  <li><code>upper-alpha</code> lub <code>upper-latin</code> to duża litera.</li></ul>
+		<ul class="nu nd" style="list-style-type: lower-roman;">
+		  <li><code>lower-roman</code> to mała liczba rzymska.</li></ul>
+		<ul class="nu nd" style="list-style-type: upper-roman;">
+		  <li><code>upper-roman</code> to duża liczba rzymska.</li></ul>
+		<p>Lista wszystkich wartości jest podana <a href="https://www.w3schools.com/cssref/pr_list-style-type.php">tutaj</a>.</p>
 		
 		<h3><code>list-style-image</code></h3>
 		<p style="color:red;font-weight:bold;">TODO!!!</p>
